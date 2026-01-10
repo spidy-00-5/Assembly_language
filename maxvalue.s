@@ -6,7 +6,7 @@
 
 
 # MEMORY LOCATIONS -  data_items
-
+# programm does not run for 64bit computers this is for 32 bit computer 
 
 .section .data 
 

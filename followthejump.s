@@ -4,46 +4,56 @@
 _start:
 
  movq $25, %rax
- jmp thelabel
+ jmp thelabel      #goes to thelable 
 
 somewhere:
  
  movq %rax, %rdi
- jmp anotherlabel
+ jmp anotherlabel  #goes to anotherlable 
 
 label1:
  
  addq %rbx, %rax
  movq $5, %rbx 
- jmp here 
+ jmp here         #goes to here 
 
 labellabel:
 
- syscall 
+ syscall          #terminal 
 
 anotherlabel:
 
  movq $60, %rax
- jmp labellabel
+ jmp labellabel   #goes to lablelable 
 
 thelabel:
 
  movq %rax, %rbx 
- jmp there 
+ jmp there       #goes to there 
 
 here:
 
  divq %rbx 
- jmp somewhere
+ jmp somewhere   #goes to somewhere
 
 there:
 
   addq $5, %rbx 
-  jmp label1
+  jmp label1    #goes to lable1 
 
 anywhere:
 
-  jmp thelabel
+  jmp thelabel  #goes to thelable 
+
+
+#note this code does not run in linear form in jumps acc.. to lable 
+
+
+
+
+
+
+
 
 
  
